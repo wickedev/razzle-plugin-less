@@ -70,29 +70,29 @@ module.exports = (
   const options = Object.assign({}, defaultOptions, userOptions);
 
   const styleLoader = {
-    loader: require.resolve('style-loader'),
+    loader: 'style-loader',
     options: options.style,
   };
 
   const cssLoader = {
-    loader: require.resolve('css-loader'),
+    loader: 'css-loader',
     options: options.css[constantEnv],
   };
 
   const resolveUrlLoader = {
-    loader: require.resolve('resolve-url-loader'),
+    loader: 'resolve-url-loader',
     options: options.resolveUrl[constantEnv],
   };
 
   const postCssLoader = {
-    loader: require.resolve('postcss-loader'),
+    loader: 'postcss-loader',
     options: Object.assign({}, options.postcss[constantEnv], {
       plugins: () => options.postcss.plugins,
     }),
   };
 
   const lessLoader = {
-    loader: require.resolve('less-loader'),
+    loader: 'less-loader',
     options: Object.assign({}, options.less[constantEnv]),
   };
 
@@ -103,7 +103,7 @@ module.exports = (
       use: isServer
         ? [
             {
-              loader: require.resolve('css-loader'),
+              loader: 'css-loader',
               options: Object.assign({}, options.css[constantEnv], {
                 onlyLocals: true,
               }),
