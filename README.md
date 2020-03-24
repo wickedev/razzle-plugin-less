@@ -5,7 +5,7 @@ This package contains a plugin for using [LESS](http://lesscss.org/) with Razzle
 ## Usage in Razzle Projects
 
 ```bash
-yarn add razzle-plugin-less --dev
+yarn add -D https://github.com/wickedev/razzle-plugin-less#v5.1.0
 ```
 
 ### With the default options
